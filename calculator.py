@@ -39,8 +39,12 @@ while True:
                     print("The result of the operation is:", result)
                     
             elif choice == 5:
-                result = number1 ** number2
-                print("The result of the operation is:", result)
+                try:
+                 result = number1 ** number2
+                 print("The result of the operation is:", result)
+
+                except OverflowError:
+                 print("The number is too large to calculate.")
                 
             elif choice == 6:
                 if number2 == 0:
